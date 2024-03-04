@@ -5,11 +5,12 @@ import copy
 import logging
 import torch.multiprocessing as mp
 import csv
-from default_params import *
-from algorithms import *
-from helpers import last_ip
 import os
 import matplotlib.pyplot as plt
+
+from default_params import DEFAULT_CONSEC_FRAMES
+from algorithms import extract_keypoints_parallel, alg2_sequential
+from helpers import last_ip
 
 try:
     mp.set_start_method('spawn')
